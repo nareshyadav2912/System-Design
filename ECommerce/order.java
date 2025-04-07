@@ -38,6 +38,9 @@ public class order {
         this.Ostatus=orderStatus;
 
     }
+    public void setPaymentStatus(paymentStatus paymentStatus){
+        this.Pstatus=paymentStatus;
+    }
     public orderStatus getOstatus() {
         return Ostatus;
     }
