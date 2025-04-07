@@ -34,6 +34,10 @@ public class order {
         return totalAmount;
     }
 
+    public void setStatus(orderStatus orderStatus){
+        this.Ostatus=orderStatus;
+
+    }
     public orderStatus getOstatus() {
         return Ostatus;
     }
@@ -44,6 +48,6 @@ public class order {
 
     //implememt this
     public double calculateTotalAmount(){
-        return 9.9;
+        return items.stream().mapToDouble(item -> item.getProduct().getPrice()*item.getQuantity()).sum();
     }
 }

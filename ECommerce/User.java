@@ -16,7 +16,9 @@ public class User {
         this.email=email;
         this.orders=new ArrayList<>();
     }
-
+    public void addOrder(order order){
+        orders.add(order);
+    }
     public String getId(){
         return id;
     }
