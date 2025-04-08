@@ -7,14 +7,14 @@ public class OrderService {
     }
     public boolean placeOrder(Order order){
         for(OrderItem item:order.getItems()){
-            Product product=inventory.geProduct(item.getProduct().getPId());
+            Product product=inventory.getProduct(item.getProduct().getPId());
             if(product==null || product.getQuantity()<item.getQuantity()){
                 System.out.println("Insufficent Stock");
                 return false;
             }
         }
         for(OrderItem item:order.getItems()){
-            Product product=inventory.geProduct(item.getProduct().getPId());
+            Product product=inventory.getProduct(item.getProduct().getPId());
             product.updateQuantity(-item.getQuantity());
         }
         order.fullfillOrder();

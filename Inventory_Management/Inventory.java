@@ -13,7 +13,7 @@ public class Inventory {
     public void removeProduct(String productId){
         hm.remove(productId);
     }
-    public Product geProduct(String productId){
+    public Product getProduct(String productId){
         return hm.get(productId);
     }
     public List<Product> getLowStockProducts(int threeshold){
